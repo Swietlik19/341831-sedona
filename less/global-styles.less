@@ -1,0 +1,47 @@
+/* Значения по умолчанию (default) - добавим в миксин по шрифтам (такой будет у body) */
+@d-font-size: 14px;
+@d-line-height: @d-font-size * 1.5; /* 21px */
+@d-font-family: "PT Sans", "Arial", sans-serif;
+@d-color: #000;
+
+@m-color: #81b3d2; /* Главный цвет, отличный от белого */
+
+.general-font(@f-size: @d-font-size; @line-height: @d-line-height; @f-family: @d-font-family; @color: @d-color) {
+  font-size: @f-size;
+  line-height: @line-height;
+  font-family: @f-family;
+  color: @color;
+}
+
+/* Пока по мобильной версии */
+
+* {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 320px; /*NOTE: Мобильная ширина */
+
+  .general-font();
+  text-transform: uppercase;
+
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
