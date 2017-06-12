@@ -1,0 +1,185 @@
+@f-b: form-block;
+
+/* HEADER */
+.@{f-b}__header {
+  padding-left: 20px;
+  padding-top: 26px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+
+  text-align: center;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.@{f-b}__title {
+  margin-bottom: 27px;
+
+  .general-font (18px, 26px);
+}
+
+.@{f-b}__header p {
+  line-height: 24px;
+}
+
+/* По группам (секциям) */
+.@{f-b}__fieldset {
+  padding-left: 20px;
+  padding-top: 19px;
+  padding-right: 20px;
+
+  border-bottom: 1px solid #e5e5e5;
+
+  &--introduce {
+    padding-bottom: 25px;
+  }
+
+  &--contacts {
+    padding-bottom: 28px;
+  }
+
+  &--opinion {
+    padding-bottom: 43px;
+  }
+
+  &--places {
+    padding-bottom: 41px;
+  }
+
+  &--summary {
+    border-bottom: none;
+  }
+}
+
+/* ЗАГОЛОВКИ */
+.@{f-b}__fieldset-title {
+  max-width: 320px;
+
+  .general-font(18px, 26px);
+  text-align: center;
+
+  &--introduce {
+    margin-bottom: 20px;
+  }
+
+  &--contacts {
+    margin-bottom: 20px;
+  }
+
+  &--opinion {
+    margin-bottom: 38px;
+  }
+
+  &--places {
+    margin-bottom: 30px;
+  }
+
+  &--summary {
+    margin-bottom: 16px;
+  }
+}
+
+.@{f-b} label {
+  .general-font(14px, 26px);
+}
+
+/* ИНПУТЫ */
+.@{f-b}__user-info {
+  width: 170px; /* TODO: Временно! */
+  padding-left: 20px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  background-color: #f2f2f2;
+  border: none;
+
+  &--introduce {
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  &--introduce:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &--contacts {
+    width: 280px;
+    margin-top: 6px;
+    margin-bottom: 13px;
+  }
+
+  &--contacts:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.@{f-b}__fieldset--contacts label {
+  margin-left: 20px;
+}
+
+.@{f-b}__fieldset input[type="checkbox"],
+.@{f-b}__fieldset input[type="radio"] {
+  display: none;
+}
+
+/* РАДИО */
+.@{f-b}__fieldset--opinion ul {
+  padding: 0;
+  padding-left: 78px;
+
+  list-style: none;
+}
+
+.@{f-b}__fieldset--opinion li {
+  margin-bottom: 42px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.@{f-b}__fieldset--opinion label,
+.@{f-b}__fieldset--places label {
+  .general-font(18px, 26px);
+  font-weight: bold;
+  text-transform: none;
+}
+
+/* ЧЕКБОКСЫ */
+.@{f-b}__fieldset--places ul {
+  padding: 0;
+  padding-left: 78px;
+
+  list-style: none;
+}
+
+.@{f-b}__fieldset--places li {
+  margin-bottom: 54px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+/* Summary (эмоции) */
+.@{f-b}__summary-text {
+  width: 100%;
+  min-height: 160px;
+  margin-bottom: 45px;
+  padding-left: 18px;
+  padding-top: 18px;
+
+  background-color: #f2f2f2;
+  border: none;
+  resize: none;
+}
+
+.@{f-b}__submit-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 38px;
+}
+
+.@{f-b}__submit {
+  width: 100%;
+}
