@@ -1,4 +1,6 @@
 .advantages {
+  margin: 0;
+
   text-align: center;
 }
 
@@ -6,39 +8,67 @@
   display: none; /* Временно! */
 }
 
-.advantages__img {
+.advantages img {
   display: block; /* Чтобы не было отступа под изображением */
+  margin: 0;
   margin-top: 38px;
 
   width: 520px;
   height: 260px;
 }
 
+/* HEADER начало */
 .advantages__header {
+  margin: 0;
   padding: 40px 20px;
-}
 
-.advantages__item-wrapper {
-  padding: 0 20px;
+  vertical-align: middle;
+
+  background-color: #fff;
 }
 
 .advantages__header b {
+  display: inline-block;
+  width: 272px;
+  margin: 0;
+
   .general-font(18px, 26px);
 }
 
 .advantages__header p {
+  margin: 0;
   margin-top: 29px;
 
   .general-font(14px, 26px);
 }
 
+@media @tablet-widths {
+
+  .advantages__header {
+    padding: 40px 0;
+  }
+
+  .advantages__header b {
+    width: 480px;
+  }
+
+}
+/* --КОНЕЦ-- header */
+
+.advantages__item-wrapper {
+  margin: 0;
+  padding: 0 20px;
+}
+
 .advantages__wrapper {
+  margin: 0;
   padding: 0 20px;
 
   background-color: #eeeeee;
 }
 
 .advantages__item {
+  margin: 0;
 
   &--first,
   &--second {
@@ -53,21 +83,24 @@
   padding-left: 15px;
   padding-top: 26px;
   padding-right: 15px;
-  padding-bottom: 26px;
+  padding-bottom: 12px;
 
   border-bottom: 1px solid #d6d6d6;
   }
 
   &--bg-gray:last-of-type {
-    border-bottom: none
+    border-bottom: none;
   }
+
 }
 
 .advantages__item--second img {
+  margin: 0;
   margin-top: 36px;
 }
 
 .advantages__item-title {
+  margin: 0;
   margin-bottom: 10px;
 
   font-size: 18px;
@@ -76,6 +109,7 @@
 
 .advantages__item span {
   display: block;
+  margin: 0;
   margin-bottom: 16px;
 
   font-size: 14px;
@@ -83,16 +117,85 @@
 }
 
 advantages__item-descr {
+  margin: 0;
+
   font-size: 14px;
   line-height: 21px;
 }
 
+/* @media ДЛЯ ПЕРВОГО И ВТОРОГО ПРЕИМУЩСТВА */
+@media @tablet-widths {
+
+  .advantages__item--first,
+  .advantages__item--second {
+    padding: 0;
+  }
+
+  .advantages__flex-container {
+    display: flex;
+    width: 100%;
+    padding: 0;
+  }
+
+  .advantages__item-wrapper {
+    flex-shrink: 0;
+    width: 256px;
+    min-height: 256px;
+    padding-top: 40px;
+  }
+
+  .advantages__item-img {
+    flex-shrink: 0;
+    width: 512px;
+    height: 256px;
+  }
+
+  .advantages__item-img img {
+    width: 512px;
+    height: 256px;
+    margin: 0;
+  }
+
+  .advantages__item--second .advantages__item-wrapper {
+    order: 2;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .advantages__item-wrapper {
+    width: 400px;
+    min-height: 256px;
+  }
+
+  .advantages__item-img {
+    width: 800px;
+    height: 256px;
+  }
+
+  .advantages__item-img img {
+    width: 800px;
+    height: 256px;
+    margin: 0;
+  }
+
+  .advantages__item--second .advantages__item-wrapper {
+    order: 2;
+  }
+
+}
+/* --КОНЕЦ-- */
+
+
 /* Список с дополнительными преимуществами */
 .advantages__item-extended {
+  margin: 0;
+
   padding-left: 70px;
   padding-top: 36px;
   padding-right: 20px;
-  padding-bottom: 36px;
+  padding-bottom: 26px;
 
   text-align: left;
   color: #000;
@@ -103,7 +206,8 @@ advantages__item-descr {
 }
 
 .advantages__item-extended li {
-  margin-bottom: 28px;
+  margin: 0;
+  margin-bottom: 26px;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -111,7 +215,66 @@ advantages__item-descr {
 }
 
 .advantages__extended-title {
+  margin: 0;
   margin-bottom: 14px;
 
   .general-font(18px, 26px);
 }
+
+@media @tablet-widths {
+
+  .advantages__item-extended {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+
+    text-align: center;
+  }
+
+  .advantages__item-extended li {
+    width: 180px;
+  }
+
+  .advantages__item-extended li:nth-child(2) {
+    order: 2;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .advantages__item-extended li {
+    width: 300px;
+  }
+}
+/* --КОНЕЦ-- списка с доп. преимуществами */
+
+
+/* @media для трех последних преимуществ */
+@media @tablet-widths {
+
+  .advantages__wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .advantages__item--bg-gray {
+    width: 255px;
+
+    border: none;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .advantages__wrapper {
+
+  }
+
+  .advantages__item--bg-gray {
+    width: 400px;
+  }
+
+}
+/* --КОНЕЦ-- */

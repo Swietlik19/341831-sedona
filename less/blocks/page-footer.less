@@ -1,13 +1,17 @@
 .page-footer {
+  margin: 0;
   padding-left: 20px;
   padding-top: 36px;
   padding-right: 20px;
   padding-bottom: 28px;
 
   text-align: center;
+
+  background-color: #fff;
 }
 
 .page-footer p {
+  margin: 0;
   margin-bottom: 36px;
 
   font-weight: bold;
@@ -19,6 +23,7 @@
 }
 
 .page-footer__social {
+  margin: 0;
   margin-bottom: 27px;
 
   font-size: 0;
@@ -26,11 +31,52 @@
 }
 
 .page-footer__copyright {
+  margin: 0;
   padding-left: 74px;
 
   text-align: left;
 }
 
 .page-footer__copyright span {
+  margin: 0;
+
   .general-font(14px, 26px);
+}
+
+@media @tablet-widths {
+
+  .page-footer {
+    display: flex;
+    padding-left: 56px;
+    padding-top: 30px;
+    padding-right: 0;
+  }
+
+  .page-footer p {
+    margin-right: 110px;
+  }
+
+  .page-footer__copyright {
+    margin-left: 117px;
+    padding-left: 0;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .page-footer {
+    padding-left: 105px;
+    padding-top: 30px;
+    padding-right: 0;
+  }
+  .page-footer p {
+    margin-right: 248px;
+  }
+
+  .page-footer__copyright {
+    margin-left: 346px;
+    padding-left: 0;
+  }
+
 }

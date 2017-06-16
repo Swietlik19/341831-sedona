@@ -3,6 +3,8 @@
 @d-line-height: @d-font-size * 1.5; /* 21px */
 @d-font-family: "PT Sans", "Arial", sans-serif;
 @d-color: #000;
+@tablet-widths: ~"(min-width: 768px)";
+@desktop-widths: ~"(min-width: 1200px)";
 
 @m-color: #81b3d2; /* Главный цвет, отличный от белого */
 
@@ -13,10 +15,8 @@
   color: @color;
 }
 
-/* Пока по мобильной версии */
-
-* {
-  margin: 0;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 html {
@@ -26,12 +26,40 @@ html {
 }
 
 body {
-  width: 320px; /*NOTE: Мобильная ширина */
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
 
   .general-font();
   text-transform: uppercase;
 
   background-color: #fff;
+}
+
+.container {
+  width: 320px; /* Мобильная ширина */
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media @tablet-widths {
+
+  .container {
+    width: 768px; /* Планшетная ширина */
+    padding: 0;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .container {
+    width: 1280px; /* Десктопная ширина */
+    padding: 0 40px;
+
+    background-color: #f2f2f2; /* TODO: Поменять серые фоны на белые */
+  }
+
 }
 
 a {
@@ -42,6 +70,16 @@ img {
   height: auto;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

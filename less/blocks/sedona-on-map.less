@@ -1,6 +1,23 @@
 .sedona-on-map {
   width: 320px;
   height: 350px;
+  margin: 0;
 
   background: url("../img/bg-map-mobile@1x.jpg") no-repeat 50% 50%;
+}
+
+@media @tablet-widths {
+
+  .sedona-on-map iframe {
+    width: 768px;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .sedona-on-map iframe {
+    width: 1200px;
+  }
+
 }
