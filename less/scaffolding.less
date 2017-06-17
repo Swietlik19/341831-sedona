@@ -33,13 +33,17 @@ body {
   .general-font();
   text-transform: uppercase;
 
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 
 .container {
   width: 320px; /* Мобильная ширина */
   margin: 0 auto;
   padding: 0;
+
+  background-color: #fff;
+  box-shadow: 5px 0 15px 0 rgba(0, 0, 0, 0.15),
+              -5px 0 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 @media @tablet-widths {
@@ -54,10 +58,8 @@ body {
 @media @desktop-widths {
 
   .container {
-    width: 1280px; /* Десктопная ширина */
-    padding: 0 40px;
-
-    background-color: #f2f2f2; /* TODO: Поменять серые фоны на белые */
+    width: 1200px; /* Десктопная ширина */
+    padding: 0;
   }
 
 }
