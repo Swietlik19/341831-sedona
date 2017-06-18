@@ -1,3 +1,21 @@
+@font-face {
+  font-weight: normal;
+  font-family: "PT Sans";
+  font-style: normal;
+
+  src: url("../fonts/PTSans.woff2") format("woff2"),
+  url("../fonts/PTSans.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "PT Sans";
+  font-style: normal;
+
+  src: url("../fonts/PTSansBold.woff2") format("woff2"),
+  url("../fonts/PTSansBold.woff") format("woff");
+}
+
 /* Значения по умолчанию (default) - добавим в миксин по шрифтам (такой будет у body) */
 @d-font-size: 14px;
 @d-line-height: @d-font-size * 1.5; /* 21px */
@@ -37,6 +55,8 @@ body {
 }
 
 .container {
+  position: relative;
+
   width: 320px; /* Мобильная ширина */
   margin: 0 auto;
   padding: 0;
