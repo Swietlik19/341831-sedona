@@ -28,8 +28,25 @@
   padding: 0;
 
   font-size: 0;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
 }
 
-.social-btn:last-of-type {
-  margin-right: 0;
+@media @tablet-widths {
+
+  .find-hotel .btn {
+    width: 458px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+  }
+
+  .social-btn:first-child {
+    margin-left: 6px;
+  }
+
 }

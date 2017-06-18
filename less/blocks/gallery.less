@@ -4,7 +4,7 @@
   padding-left: 20px;
   padding-top: 22px;
   padding-right: 20px;
-  padding-bottom: 17px;
+  padding-bottom: 18px;
 
   border-bottom: 1px solid #e5e5e5;
 }
@@ -14,10 +14,12 @@
   margin: 0;
 }
 
+.gallery__item-descr {
+  padding-top: 18px;
+}
+
 .gallery__item-img {
   margin: 0;
-
-  .general-font(14px, 24px);
 }
 
 .gallery__item-img img {
@@ -48,15 +50,16 @@
     padding: 0;
 
     border: none;
+
+    &:first-of-type {
+      width: 648px;
+    }
+
   }
 
   .gallery__item img {
     width: 324px;
     height: 267px;
-  }
-
-  .gallery__item:first-of-type {
-    width: 648px;
   }
 
   .gallery__item:first-of-type img {
@@ -72,7 +75,11 @@
   }
 
   .gallery__item-descr {
-    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 19px;
+    padding-bottom: 20px;
 
     background-color: #f2f2f2;
   }
@@ -81,14 +88,20 @@
     background-color: #eaeaea;
   }
 
+  .gallery__item-descr-group {
+    width: 250px;
+  }
+
+  .gallery__item i {
+    display: block;
+  }
+
   .gallery__item-descr b {
-    position: absolute;
-    top: 50%;
-    right: 35px;
-
     margin: 0;
+  }
 
-    transform: translateY(-50%);
+  .gallery__item:first-child .gallery__item-descr-group {
+    width: 575px;
   }
 
 }
@@ -96,7 +109,14 @@
 @media @desktop-widths {
 
   .gallery__item {
+    position: relative;
+
     width: 400px;
+
+    &:first-of-type {
+      width: 1200px;
+    }
+
   }
 
   .gallery__item img {
@@ -104,22 +124,14 @@
     height: 267px;
   }
 
-  .gallery__item:first-of-type {
-    width: 1200px;
-  }
-
   .gallery__item:first-of-type img {
     width: 1200px;
-    height: 400px;
+    height: 399px;
   }
 
   .gallery__item-descr,
   .gallery__item:nth-of-type(2n + 3) .gallery__item-descr {
     background-color: rgba(0, 0, 0, 0.3);
-  }
-
-  .gallery__item {
-    position: relative;
   }
 
   .gallery__item-descr {
@@ -131,6 +143,13 @@
     color: #fff;
   }
 
+  .gallery__item-descr-group {
+    width: 327px;
+  }
+
+  .gallery__item:first-child .gallery__item-descr-group {
+    width: 1127px;
+  }
 
 
 }

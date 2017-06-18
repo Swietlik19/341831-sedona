@@ -14,7 +14,7 @@
             <div class="main-nav__wrapper">
               <ul class="main-nav__list">
                 <li class="main-nav__item"><a href="index.html">Главная</a></li>
-                <li class="main-nav__item"><a>Фото и видео</a></li>
+                <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
                 <li class="main-nav__item main-nav__item--active"><a>Форма отзыва</a></li>
                 <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
               </ul>
@@ -33,32 +33,34 @@
       <main class="form-block">
         <header class="form-block__header">
           <h1 class="form-block__title">Оставьте свой отзыв</h1>
-          <p>Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <p>Помогите нашим отелям стать лучше! Оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</p>
         </header>
 
         <form class="form-block__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="form-block__fieldset form-block__fieldset--introduce">
             <h2 class="form-block__fieldset-title form-block__fieldset-title--introduce">Представьтесь: </h2>
 
-            <div class="form-block__filedset-row">
+            <div class="form-block__field-introduce">
               <label for="name-id">Имя*: </label>
               <input class="form-block__user-info form-block__user-info--introduce" type="text" name="name" id="name-id" placeholder="Петр" required>
             </div>
-            <div class="form-block__filedset-row">
+            <div class="form-block__field-introduce">
               <label for="surname-id">Фамилия*: </label>
               <input class="form-block__user-info form-block__user-info--introduce" type="text" name="surname" id="surname-id" placeholder="Иванов" required>
             </div>
-            <div class="form-block__filedset-row">
+            <div class="form-block__field-introduce">
               <label for="sec-name-id">Отчество: </label>
               <input class="form-block__user-info form-block__user-info--introduce" type="text" name="sec-name" id="sec-name-id" placeholder="Александрович">
             </div>
           </div>
 
           <div class="form-block__fieldset form-block__fieldset--contacts">
-            <h2 class="form-block__fieldset-title form-block__fieldset-title--contacts">Контактная информация: </h2>
+            <div class="form-block__fieldset-title-wrapper">
+              <h2 class="form-block__fieldset-title form-block__fieldset-title--contacts">Контактная информация: </h2>
+            </div>
             <div class="form-block__group-flex">
               <div class="form-block__field-wrapper">
-                <label for="telephone-id">Контактный телефон*: </label>
+                <label for="telephone-id"><span class="temp-text">Контактный</span> телефон*: </label>
                 <input class="form-block__user-info form-block__user-info--contacts" type="tel" name="telephone" id="telephone-id" placeholder="Введите телефон" required>
               </div>
               <div class="form-block__field-wrapper">
@@ -90,7 +92,9 @@
           </div>
 
           <div class="form-block__fieldset form-block__fieldset--places">
-            <h2 class="form-block__fieldset-title form-block__fieldset-title--places">Посещенные достопримечательности: </h2>
+            <div class="form-block__fieldset-title-wrapper">
+              <h2 class="form-block__fieldset-title form-block__fieldset-title--places">Посещенные достопримечательности: </h2>
+            </div>
 
             <ul>
               <li>
@@ -116,14 +120,16 @@
           </div>
 
           <div class="form-block__fieldset form-block__fieldset--summary">
-            <h2 class="form-block__fieldset-title form-block__fieldset-title--summary">Опишите свои эмоции: </h2>
+            <div class="form-block__fieldset-title-wrapper">
+              <h2 class="form-block__fieldset-title form-block__fieldset-title--summary">Опишите свои эмоции: </h2>
+            </div>
 
             <textarea class="form-block__summary-text" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
 
           <div class="form-block__submit-wrapper">
             <input class="form-block__submit" type="submit" name="submit-btn" id="submit-btn-id" value="Отправить отзыв">
-            <span><sup>*</sup> - Обязательные поля</span>
+            <span><sup>*</sup>&mdash; Обязательные поля</span>
           </div>
         </form>
       </main>

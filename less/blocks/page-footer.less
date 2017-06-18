@@ -24,7 +24,7 @@
 
 .page-footer__social {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 42px;
 
   font-size: 0;
   vertical-align: middle;
@@ -43,22 +43,41 @@
   .general-font(14px, 26px);
 }
 
+.page-footer__copyright a {
+  position: relative;
+}
+
+.page-footer__copyright img {
+  position: absolute;
+  right: -40px;
+  top: 60%;
+
+  display: block;
+  margin: 0;
+
+  transform: translateY(-50%);
+}
+
 @media @tablet-widths {
 
   .page-footer {
     display: flex;
     padding-left: 56px;
-    padding-top: 30px;
+    padding-top: 36px;
     padding-right: 0;
+    padding-bottom: 10px;
   }
 
   .page-footer p {
     margin-right: 110px;
+    padding-top: 8px;
   }
 
   .page-footer__copyright {
     margin-left: 117px;
-    padding-left: 0;
+    padding-left: 2px;
+    padding-top: 9px;
+    padding-bottom: 9px;
   }
 
 }
@@ -66,17 +85,16 @@
 @media @desktop-widths {
 
   .page-footer {
-    padding-left: 105px;
-    padding-top: 30px;
-    padding-right: 0;
+    padding-left: 132px;
   }
+
   .page-footer p {
-    margin-right: 248px;
+    margin-right: 250px;
+    padding-top: 10px;
   }
 
   .page-footer__copyright {
-    margin-left: 346px;
-    padding-left: 0;
+    margin-left: 350px;
   }
 
 }
