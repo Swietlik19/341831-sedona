@@ -13,6 +13,23 @@
   background-color: @m-color;
   border: none;
   outline: none;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #5496bd;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+
 }
 
 .find-hotel .btn {
@@ -47,6 +64,36 @@
 
   .social-btn:first-child {
     margin-left: 6px;
+  }
+
+}
+
+.modal-btn {
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .general-font(18px, 26px);
+  color: #fff;
+
+  &--success {
+    width: 280px;
+  }
+
+}
+
+@media @tablet-widths {
+
+  .modal-btn {
+    width: 272px;
+
+    .general-font(21px, 26px);
+    color: #fff;
+
+    &--success {
+      width: 458px;
+    }
+
   }
 
 }

@@ -1,11 +1,118 @@
-.modal { /* TODO: Сделать окна! */
+.modal {
+  position: absolute;
+  bottom: 715px;
+
+  width: 320px;
+  padding-top: 40px;
+  padding-bottom: 35px;
+
+  text-align: center;
+
+  background-color: #fff;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15),
+              0 -1px 2px 0 rgba(0, 0, 0, 0.15);
 
   &--error {
     display: none;
   }
 
   &--success {
+    bottom: 348px;
+
     display: none;
+
+    padding-bottom: 0;
+  }
+
+}
+
+.modal strong {
+  display: block;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  .general-font(18px, 26px);
+}
+
+.modal p {
+  margin-top: 28px;
+  margin-bottom: 22px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  .general-font(14px, 24px);
+}
+
+.modal--success p {
+  margin-bottom: 34px;
+}
+
+.modal__btn-wrapper {
+  padding: 20px;
+
+  background-color: #f2f2f2;
+}
+
+@media @tablet-widths {
+
+  .modal {
+    left: 50%;
+    bottom: 360px;
+
+    width: 400px;
+    padding-top: 58px;
+    padding-bottom: 49px;
+
+    box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.15);
+
+    transform: translateX(-50%);
+
+    &--success {
+      bottom: 520px;
+
+      width: 640px;
+
+      padding-bottom: 0;
+    }
+
+  }
+
+  .modal strong {
+     padding-left: 80px;
+     padding-right: 80px;
+
+    .general-font(30px, 40px);
+  }
+
+  .modal p {
+    margin-top: 24px;
+    margin-bottom: 30px;
+  }
+
+  .modal--success p {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .modal__btn-wrapper {
+    padding: 44px 91px;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .modal {
+    bottom: 245px;
+
+    &--success {
+      bottom: 520px;
+    }
+
+  }
+
+  .modal__btn-wrapper {
+    padding: 44px 91px;
   }
 
 }
