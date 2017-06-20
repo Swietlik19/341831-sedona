@@ -3,8 +3,8 @@
   font-family: "PT Sans";
   font-style: normal;
 
-  src: url("../fonts/PTSans.woff2") format("woff2"),
-  url("../fonts/PTSans.woff") format("woff");
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+  url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
@@ -12,8 +12,8 @@
   font-family: "PT Sans";
   font-style: normal;
 
-  src: url("../fonts/PTSansBold.woff2") format("woff2"),
-  url("../fonts/PTSansBold.woff") format("woff");
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+  url("../fonts/ptsansbold.woff") format("woff");
 }
 
 /* Значения по умолчанию (default) - добавим в миксин по шрифтам (такой будет у body) */
@@ -23,6 +23,9 @@
 @d-color: #000;
 @tablet-widths: ~"(min-width: 768px)";
 @desktop-widths: ~"(min-width: 1200px)";
+@retina: ~"(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+@tablet-retina: ~"(min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx)";
+@desktop-retina: ~"(min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx)";
 
 @m-color: #81b3d2; /* Главный цвет, отличный от белого */
 
@@ -104,4 +107,12 @@ img {
 
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.svg__wrapper {
+  display: none;
+}
+
+.social-svg {
+  fill: #fff;
 }

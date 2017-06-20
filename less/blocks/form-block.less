@@ -121,6 +121,7 @@
 
   background-color: #f2f2f2;
   border: none;
+  outline-color: @m-color;
 
   &--introduce {
     flex-grow: 1;
@@ -153,6 +154,18 @@
 .@{f-b}__fieldset input[type="radio"] {
   display: none;
   margin: 0;
+}
+
+.@{f-b}__user-info:hover,
+.@{f-b}__summary-text:hover {
+  background-color: #e5e5e5;
+}
+
+.@{f-b}__user-info:focus ,
+.@{f-b}__summary-text:focus {
+  background-color: #fff;
+  outline-color: #e5e5e5;
+  box-shadow: inset 0 0 0 4px #e5e5e5;
 }
 
 /* РАДИО */
@@ -200,8 +213,27 @@
   cursor: pointer;
 }
 
-.@{f-b}__fieldset--opinion input[type="radio"]:checked + label::before {
+.@{f-b}__fieldset--opinion .form-block__radio:checked + label::before {
   background-color: #333333;
+}
+
+.@{f-b}__fieldset--opinion li label:hover::before {
+  border-color: #e5e5e5;
+  background-color: #e5e5e5;
+}
+
+.@{f-b}__fieldset--opinion input[type="radio"]:checked + label:hover::before {
+  border-color: #e5e5e5;
+}
+
+.@{f-b}__fieldset--opinion li label:active::before {
+  border-color: #d5d5d5;
+  background-color: #d5d5d5;
+}
+
+.@{f-b}__fieldset--opinion input[type="radio"]:checked + label:active::before {
+  border-color: #d5d5d5;
+  background-color: rgba(51, 51, 51, 0.3);
 }
 
 /* ЧЕКБОКСЫ */
@@ -236,6 +268,40 @@
   border-radius: 5px;
 
   cursor: pointer;
+}
+
+.@{f-b}__fieldset--places label {
+  position: relative;
+}
+
+.@{f-b}__checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  fill: #333333;
+
+  transform: translateY(-50%);
+}
+
+.@{f-b}__checkbox:checked + label .@{f-b}__checkbox-icon {
+  display: block;
+}
+
+.@{f-b}__checkbox + label:active .@{f-b}__checkbox-icon {
+  opacity: 0.3;
+}
+
+.@{f-b}__fieldset--places li label:hover::before {
+  background-color: #e5e5e5;
+}
+
+.@{f-b}__fieldset--places li label:active::before {
+  background-color: #d5d5d5;
 }
 
 /* Summary (эмоции) */
@@ -595,15 +661,15 @@
   .@{f-b}__fieldset--places li {
     width: auto;
     margin: 0;
-    margin-right: 73px;
+    margin-right: 68px;
     padding: 0;
     padding-left: 2px;
 
     &:nth-child(2n) {
-      margin-right: 73px;
+      margin-right: 68px;
     }
 
-    &:last-child {
+    &:nth-child(4n) {
       margin-right: 0;
     }
 
