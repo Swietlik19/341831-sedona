@@ -36,9 +36,9 @@
 
       <header class="page-header">
         <div class="page-header__top">
-          <nav class="main-nav"> <!-- main-nav-  -open - для открытого состояния меню-->
+          <nav class="main-nav">
             <div class="main-nav__wrapper">
-              <ul class="main-nav__list">
+              <ul class="main-nav__list main-nav__list--open">
                 <li class="main-nav__item"><a href="index.html">Главная</a>
                   <button class="main-nav__close" type="button">
                     Закрыть меню
@@ -83,11 +83,11 @@
 
             <div class="form-block__field-introduce">
               <label for="name-id">Имя*: </label>
-              <input class="form-block__user-info form-block__user-info--introduce" type="text" name="name" id="name-id" placeholder="Петр" required>
+              <input class="form-block__user-info form-block__user-info--introduce" type="text" name="name" id="name-id" placeholder="Петр">
             </div>
             <div class="form-block__field-introduce">
               <label for="surname-id">Фамилия*: </label>
-              <input class="form-block__user-info form-block__user-info--introduce" type="text" name="surname" id="surname-id" placeholder="Иванов" required>
+              <input class="form-block__user-info form-block__user-info--introduce" type="text" name="surname" id="surname-id" placeholder="Иванов">
             </div>
             <div class="form-block__field-introduce">
               <label for="sec-name-id">Отчество: </label>
@@ -102,11 +102,11 @@
             <div class="form-block__group-flex">
               <div class="form-block__field-wrapper">
                 <label for="telephone-id"><span class="temp-text">Контактный</span> телефон*: </label>
-                <input class="form-block__user-info form-block__user-info--contacts" type="tel" name="telephone" id="telephone-id" placeholder="Введите телефон" required>
+                <input class="form-block__user-info form-block__user-info--contacts" type="tel" name="telephone" id="telephone-id" placeholder="Введите телефон">
               </div>
               <div class="form-block__field-wrapper">
                 <label for="email-id">Электронная почта*: </label>
-                <input class="form-block__user-info form-block__user-info--contacts" type="email" name="email" id="email-id" placeholder="Введите e-mail" required>
+                <input class="form-block__user-info form-block__user-info--contacts" type="email" name="email" id="email-id" placeholder="Введите e-mail">
               </div>
             </div>
           </div>
@@ -243,5 +243,6 @@
       </div>
 
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
