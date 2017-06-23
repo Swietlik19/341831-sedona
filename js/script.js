@@ -38,7 +38,7 @@ form.addEventListener("submit", function (evt) {
     inputName.classList.remove("form-block__user-info--error");
   }
 
-   if (!inputSurname.value) {
+  if (!inputSurname.value) {
     errorCheck = true;
     inputSurname.classList.add("form-block__user-info--error");
   } else {
