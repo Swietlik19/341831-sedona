@@ -307,12 +307,8 @@
   transform: translateY(-50%);
 }
 
-.@{f-b}__checkbox:checked + label .@{f-b}__checkbox-icon {
-  display: block;
-}
-
-.@{f-b}__checkbox + label:active .@{f-b}__checkbox-icon {
-  opacity: 0.3;
+.@{f-b}__checkbox:checked + label::before {
+  background: #f2f2f2 url("../img/icon-tick.svg") no-repeat 50% 50%;
 }
 
 .@{f-b}__fieldset--places .@{f-b}__checkbox-label:hover::before {
@@ -320,7 +316,7 @@
 }
 
 .@{f-b}__fieldset--places .@{f-b}__checkbox-label:active::before {
-  background-color: #d5d5d5;
+  background: #d5d5d5 url("../img/icon-tick-active.svg") no-repeat 50% 50%;
 }
 
 /* Summary (эмоции) */
